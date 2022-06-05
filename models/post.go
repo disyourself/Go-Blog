@@ -21,18 +21,19 @@ type Post struct {
 }
 
 type PostMore struct {
-	Pid        int           `json:"pid"` //文章ID
-	Title      string        `json:"Title"`
-	Slug       string        `json:"slug"`       //自定义文章path
-	Content    template.HTML `json:"content"`    //文章的html
-	Markdown   string        `json:"markdown"`   //文章的markdown
-	CategoryId int           `json:"categoryId"` //分类id
-	UserId     int           `json:"userId"`
-	UserName   string        `json:"userName"`
-	ViewCount  int           `json:"viewCount"`
-	Type       int           `json:"type"` //文章类型 0 普通，1 自定义文章
-	CreateAt   time.Time     `json:"creatAt"`
-	UpdateAt   time.Time     `json:"updateAt"`
+	Pid          int           `json:"pid"` //文章ID
+	Title        string        `json:"Title"`
+	Slug         string        `json:"slug"`       //自定义文章path
+	Content      template.HTML `json:"content"`    //文章的html
+	Markdown     string        `json:"markdown"`   //文章的markdown
+	CategoryId   int           `json:"categoryId"` //分类id
+	CategoryName string        `json:"categoryName"`
+	UserId       int           `json:"userId"`
+	UserName     string        `json:"userName"`
+	ViewCount    int           `json:"viewCount"`
+	Type         int           `json:"type"` //文章类型 0 普通，1 自定义文章
+	CreateAt     string        `json:"creatAt"`
+	UpdateAt     string        `json:"updateAt"`
 }
 
 type PostReq struct {

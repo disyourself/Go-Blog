@@ -39,12 +39,12 @@ var Cfg *tomlConfig
 func init() {
 	//每个包里面的init都会先启动
 	Cfg = new(tomlConfig)
-
 	Cfg.System.AppName = "Go-Blog"
 	Cfg.System.Version = 1.0
 	currentDir, _ := os.Getwd()
 	Cfg.System.CurrentDir = currentDir
 	_, err := toml.DecodeFile("config/config.toml", &Cfg)
+
 	if err != nil {
 		panic(err)
 	}
